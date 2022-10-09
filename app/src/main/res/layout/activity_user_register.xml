@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <EditText
+        android:id="@+id/nrNameET"
+        android:layout_width="330dp"
+        android:layout_height="53dp"
+        android:hint="Enter username"
+        app:layout_constraintBottom_toTopOf="@+id/raEmailET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/raEmailET"
+        android:layout_width="330dp"
+        android:layout_height="53dp"
+        android:hint="Enter mail id"
+        app:layout_constraintBottom_toTopOf="@+id/raAddress2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nrNameET" />
+
+    <EditText
+        android:id="@+id/raAddress2"
+        android:layout_width="326dp"
+        android:layout_height="50dp"
+        android:hint="enter password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/raCountry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/raEmailET" />
+
+    <EditText
+        android:id="@+id/raCountry"
+        android:layout_width="326dp"
+        android:layout_height="50dp"
+        android:hint="confirm password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/rSignUpBT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/raAddress2" />
+
+    <Button
+        android:id="@+id/rSignUpBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REGISTER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rLoginBT"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/raCountry" />
+
+    <Button
+        android:id="@+id/rLoginBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickLogin"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rSignUpBT"
+        app:layout_constraintTop_toBottomOf="@+id/raCountry" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="343dp"
+        android:layout_height="107dp"
+        app:layout_constraintBottom_toTopOf="@+id/nrNameET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rentalhome" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

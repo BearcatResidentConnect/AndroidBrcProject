@@ -3,16 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/S546686/AndroidStudioProjects/BRCAndroid/app/src/main/res/drawable/gradient.xml" value="0.1645" />
-        <entry key="..\:/Users/S546686/AndroidStudioProjects/BRCAndroid/app/src/main/res/drawable/phone.xml" value="0.1" />
-        <entry key="..\:/Users/S546686/AndroidStudioProjects/BRCAndroid/app/src/main/res/layout/activity_list_rentals.xml" value="0.16354166666666667" />
-        <entry key="..\:/Users/S546686/AndroidStudioProjects/BRCAndroid/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/S546686/AndroidStudioProjects/BRCAndroid/app/src/main/res/layout/activity_register.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/S546686/AndroidStudioProjects/BRCAndroid/app/src/main/res/layout/activity_rental_register.xml" value="0.16354166666666667" />
-        <entry key="..\:/Users/S546686/AndroidStudioProjects/BRCAndroid/app/src/main/res/layout/activity_user_applications.xml" value="0.22" />
-        <entry key="..\:/Users/S546686/AndroidStudioProjects/BRCAndroid/app/src/main/res/layout/activity_user_home.xml" value="0.3420479302832244" />
-        <entry key="..\:/Users/S546686/AndroidStudioProjects/BRCAndroid/app/src/main/res/layout/activity_user_profile.xml" value="0.22" />
-        <entry key="..\:/Users/S546686/AndroidStudioProjects/BRCAndroid/app/src/main/res/layout/activity_user_register.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/s546904/Downloads/BRCAndroid/BRCAndroid/app/src/main/res/layout/activity_list_rentals.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/s546904/Downloads/BRCAndroid/BRCAndroid/app/src/main/res/layout/activity_main.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/s546904/Downloads/BRCAndroid/BRCAndroid/app/src/main/res/layout/activity_rental_register.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/s546904/Downloads/BRCAndroid/BRCAndroid/app/src/main/res/layout/activity_user_applications.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/s546904/Downloads/BRCAndroid/BRCAndroid/app/src/main/res/layout/activity_user_home.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/s546904/Downloads/BRCAndroid/BRCAndroid/app/src/main/res/layout/activity_user_profile.xml" value="0.15520833333333334" />
+        <entry key="..\:/Users/s546904/Downloads/BRCAndroid/BRCAndroid/app/src/main/res/layout/activity_user_register.xml" value="0.10104166666666667" />
       </map>
     </option>
   </component>
