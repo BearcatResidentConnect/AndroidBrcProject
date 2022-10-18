@@ -25,4 +25,5 @@ public class UserApplications extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
+
 }

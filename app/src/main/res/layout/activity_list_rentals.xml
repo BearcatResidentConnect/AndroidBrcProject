@@ -68,6 +68,7 @@
         android:id="@+id/imageView4"
         android:layout_width="102dp"
         android:layout_height="105dp"
+        android:onClick="onClickRegisterRental"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
-    android:clickable="true"
     android:layout_width="match_parent"
     android:layout_height="80dp"
-    android:layout_marginBottom="8dp"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    android:foreground="?attr/selectableItemBackground">
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/daftar_icon"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/apt"/>
+            android:src="@drawable/apt" />
 
         <TextView
             android:id="@+id/daftar_judul"
@@ -45,7 +46,7 @@
             android:layout_toRightOf="@+id/daftar_icon"
             android:ellipsize="end"
             android:singleLine="true"
-            android:text="Near by you"
+            android:text="Applications submitted"
             android:textAppearance="?attr/textAppearanceListItem"
             android:textColor="#333333"
             android:textSize="14sp" />
