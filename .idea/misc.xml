@@ -6,10 +6,11 @@
         <entry key="..\:/Users/S547187/Desktop/Android/AndroidBrcProject/app/src/main/res/layout/activity_list_rentals.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/S547187/Desktop/Android/AndroidBrcProject/app/src/main/res/layout/activity_main.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/S547187/Desktop/Android/AndroidBrcProject/app/src/main/res/layout/activity_rental_register.xml" value="0.16354166666666667" />
-        <entry key="..\:/Users/S547187/Desktop/Android/AndroidBrcProject/app/src/main/res/layout/activity_user_applications.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/S547187/Desktop/Android/AndroidBrcProject/app/src/main/res/layout/activity_user_applications.xml" value="0.22" />
         <entry key="..\:/Users/S547187/Desktop/Android/AndroidBrcProject/app/src/main/res/layout/activity_user_home.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/S547187/Desktop/Android/AndroidBrcProject/app/src/main/res/layout/activity_user_profile.xml" value="0.16354166666666667" />
         <entry key="..\:/Users/S547187/Desktop/Android/AndroidBrcProject/app/src/main/res/layout/activity_user_register.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/S547187/Desktop/Android/AndroidBrcProject/app/src/main/res/layout/item_list.xml" value="0.1" />
       </map>
     </option>
   </component>
@@ -18,5 +19,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>
