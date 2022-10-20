@@ -7,64 +7,65 @@
     tools:context=".UserRegister">
 
     <EditText
-        android:id="@+id/nrNameET"
+        android:id="@+id/idREdtUserName"
         android:layout_width="330dp"
         android:layout_height="53dp"
         android:hint="Enter username"
-        app:layout_constraintBottom_toTopOf="@+id/raEmailET"
+        app:layout_constraintBottom_toTopOf="@+id/idREdtEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/raEmailET"
+        android:id="@+id/idREdtEmail"
         android:layout_width="330dp"
         android:layout_height="53dp"
         android:hint="Enter mail id"
-        app:layout_constraintBottom_toTopOf="@+id/raAddress2"
+        app:layout_constraintBottom_toTopOf="@+id/idREdtPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nrNameET" />
+        app:layout_constraintTop_toBottomOf="@+id/idREdtUserName" />
 
     <EditText
-        android:id="@+id/raAddress2"
+        android:id="@+id/idREdtPassword"
         android:layout_width="326dp"
         android:layout_height="50dp"
         android:hint="enter password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/raCountry"
+        app:layout_constraintBottom_toTopOf="@+id/idRConEdtPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raEmailET" />
+        app:layout_constraintTop_toBottomOf="@+id/idREdtEmail" />
 
     <EditText
-        android:id="@+id/raCountry"
+        android:id="@+id/idRConEdtPassword"
         android:layout_width="326dp"
         android:layout_height="50dp"
         android:hint="confirm password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/rSignUpBT"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raAddress2" />
+        app:layout_constraintTop_toBottomOf="@+id/idREdtPassword" />
 
     <Button
-        android:id="@+id/rSignUpBT"
+        android:id="@+id/SignUpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClickRegister"
         android:text="REGISTER"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rLoginBT"
+        app:layout_constraintEnd_toStartOf="@+id/loginBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raCountry" />
+        app:layout_constraintTop_toBottomOf="@+id/idRConEdtPassword" />
 
     <Button
-        android:id="@+id/rLoginBT"
+        android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onClickLogin"
@@ -72,19 +73,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/rSignUpBT"
-        app:layout_constraintTop_toBottomOf="@+id/raCountry" />
+        app:layout_constraintStart_toEndOf="@+id/SignUpBtn"
+        app:layout_constraintTop_toBottomOf="@+id/idRConEdtPassword" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="343dp"
         android:layout_height="107dp"
-        app:layout_constraintBottom_toTopOf="@+id/nrNameET"
+        app:layout_constraintBottom_toTopOf="@+id/idREdtUserName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/rentalhome" />
+        app:srcCompat="@drawable/logo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
