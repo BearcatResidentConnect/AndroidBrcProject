@@ -7,43 +7,86 @@
     android:onClick="onClickLogin"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/dancin"
+        android:text="Login"
+        android:textColor="#607d8b"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/dancin"
+        android:text="Bearcat Resident Connect"
+        android:textColor="#6200EA"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="343dp"
+        android:layout_height="107dp"
+        app:layout_constraintBottom_toTopOf="@+id/idEdtUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview"
+        app:srcCompat="@drawable/logo" />
+
     <EditText
-        android:id="@+id/nrNameET"
+        android:id="@+id/idEdtUserName"
         android:layout_width="330dp"
         android:layout_height="53dp"
         android:hint="Enter username"
-        app:layout_constraintBottom_toTopOf="@+id/raAddress2"
+        app:layout_constraintBottom_toTopOf="@+id/idEdtPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/raAddress2"
+        android:id="@+id/idEdtPassword"
         android:layout_width="326dp"
         android:layout_height="50dp"
         android:hint="enter password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/rSignUpBT"
+        app:layout_constraintBottom_toTopOf="@+id/idBtnRegister"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nrNameET" />
+        app:layout_constraintTop_toBottomOf="@+id/idEdtUserName" />
 
     <Button
-        android:id="@+id/rSignUpBT"
+        android:id="@+id/idBtnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onClickLogin"
         android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/rLoginBT"
+        app:layout_constraintEnd_toStartOf="@+id/idBtnRegister"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raAddress2" />
+        app:layout_constraintTop_toBottomOf="@+id/idEdtPassword" />
 
     <Button
-        android:id="@+id/rLoginBT"
+        android:id="@+id/idBtnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onClickRegister"
@@ -51,19 +94,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/rSignUpBT"
-        app:layout_constraintTop_toBottomOf="@+id/raAddress2" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="343dp"
-        android:layout_height="107dp"
-        app:layout_constraintBottom_toTopOf="@+id/nrNameET"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/rentalhome" />
+        app:layout_constraintStart_toEndOf="@+id/idBtnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtPassword" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
