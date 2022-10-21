@@ -7,77 +7,77 @@
     tools:context=".RentalRegister">
 
     <EditText
-        android:id="@+id/nrNameET"
+        android:id="@+id/idPptName"
         android:layout_width="330dp"
         android:layout_height="53dp"
         android:hint="Property name"
-        app:layout_constraintBottom_toTopOf="@+id/raEmailET"
+        app:layout_constraintBottom_toTopOf="@+id/idPptEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/raEmailET"
+        android:id="@+id/idPptEmail"
         android:layout_width="330dp"
         android:layout_height="53dp"
         android:hint="Enter mail id"
-        app:layout_constraintBottom_toTopOf="@+id/raAddress2"
+        app:layout_constraintBottom_toTopOf="@+id/idPptAdr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nrNameET" />
+        app:layout_constraintTop_toBottomOf="@+id/idPptName" />
 
     <EditText
-        android:id="@+id/raAddress2"
+        android:id="@+id/idPptAdr"
         android:layout_width="326dp"
         android:layout_height="50dp"
         android:hint="Address"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/raCountry"
+        app:layout_constraintBottom_toTopOf="@+id/idPptCou"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raEmailET" />
+        app:layout_constraintTop_toBottomOf="@+id/idPptEmail" />
 
     <EditText
-        android:id="@+id/raCountry"
+        android:id="@+id/idPptCou"
         android:layout_width="120dp"
-        android:layout_height="37dp"
+        android:layout_height="48dp"
         android:hint="Country"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/raZIP"
-        app:layout_constraintEnd_toStartOf="@+id/raState"
+        app:layout_constraintBottom_toTopOf="@+id/idPptZip"
+        app:layout_constraintEnd_toStartOf="@+id/idPptStat"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raAddress2" />
+        app:layout_constraintTop_toBottomOf="@+id/idPptAdr" />
 
     <EditText
-        android:id="@+id/raState"
+        android:id="@+id/idPptStat"
         android:layout_width="138dp"
-        android:layout_height="41dp"
+        android:layout_height="48dp"
         android:hint="State"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/raZIP"
+        app:layout_constraintBottom_toTopOf="@+id/idPptZip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/raCountry"
-        app:layout_constraintTop_toBottomOf="@+id/raAddress2" />
+        app:layout_constraintStart_toEndOf="@+id/idPptCou"
+        app:layout_constraintTop_toBottomOf="@+id/idPptAdr" />
 
     <EditText
-        android:id="@+id/raZIP"
+        android:id="@+id/idPptZip"
         android:layout_width="138dp"
-        android:layout_height="41dp"
+        android:layout_height="48dp"
         android:hint="Zip code"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/rSignUpBT"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raState" />
+        app:layout_constraintTop_toBottomOf="@+id/idPptStat" />
 
     <Button
-        android:id="@+id/rSignUpBT"
+        android:id="@+id/SignUpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="REGISTER"
@@ -85,13 +85,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raZIP" />
+        app:layout_constraintTop_toBottomOf="@+id/idPptZip" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="343dp"
         android:layout_height="107dp"
-        app:layout_constraintBottom_toTopOf="@+id/nrNameET"
+        app:layout_constraintBottom_toTopOf="@+id/idPptName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
