@@ -48,7 +48,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview"
-        app:srcCompat="@drawable/logo" />
+        />
 
     <EditText
         android:id="@+id/idEdtUserName"
