@@ -1,4 +1,4 @@
-package com.example.brcandroid.ui.slideshow;
+package com.example.brcandroid.ui.viewrentals;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,21 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.brcandroid.databinding.FragmentSlideshowBinding;
 
-public class SlideshowFragment extends Fragment {
+import com.example.brcandroid.databinding.FragmentViewrentalsBinding;
 
-    private FragmentSlideshowBinding binding;
+public class ViewRentalFragment extends Fragment {
+
+    private FragmentViewrentalsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        ViewRentalsViewModel slideshowViewModel =
+                new ViewModelProvider(this).get(ViewRentalsViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentViewrentalsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
+        final TextView textView = binding.textViewrentals;
         slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }

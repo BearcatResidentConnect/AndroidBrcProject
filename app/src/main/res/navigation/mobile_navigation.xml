@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.brcandroid.ui.home.HomeFragment"
+        android:name="com.example.brcandroid.ui.viewapplications.ViewApplicationsFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_viewapplications" />
 
     <fragment
         android:id="@+id/nav_viewApplications"
-        android:name="com.example.brcandroid.ui.gallery.GalleryFragment"
+        android:name="com.example.brcandroid.ui.profile.ProfileFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/nav_viewRentals"
-        android:name="com.example.brcandroid.ui.slideshow.SlideshowFragment"
+        android:name="com.example.brcandroid.ui.viewrentals.ViewRentalFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_viewrentals" />
 </navigation>

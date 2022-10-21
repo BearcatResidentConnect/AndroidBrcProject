@@ -10,7 +10,7 @@
 
     <include
         android:id="@+id/app_bar_nav_main2"
-        layout="@layout/activity_list_rentals"
+        layout="@layout/activity_user_profile"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
