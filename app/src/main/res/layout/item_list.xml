@@ -2,18 +2,18 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
-    android:layout_width="match_parent"
+    android:layout_width="340dp"
     android:layout_height="80dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="26dp"
+    android:layout_marginRight="26dp"
+    android:layout_marginBottom="30dp"
     android:clickable="true"
     android:foreground="?attr/selectableItemBackground"
     app:cardCornerRadius="10dp">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="276dp"
+        android:layout_height="91dp"
         android:gravity="center">
 
         <ImageView
@@ -39,8 +39,8 @@
 
         <TextView
             android:id="@+id/daftar_des"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="294dp"
+            android:layout_height="29dp"
             android:layout_below="@+id/daftar_judul"
             android:layout_marginLeft="16dp"
             android:layout_toRightOf="@+id/daftar_icon"
