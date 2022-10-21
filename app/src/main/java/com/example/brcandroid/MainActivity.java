@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
            String userName = userNameET.getText().toString();
            String password = userPasswordET.getText().toString();
 
-           BrcAPIInterface api = new BrcAPIInterface(MainActivity.this, "http://192.168.1.35:5000/api");
+           BrcAPIInterface api = new BrcAPIInterface(MainActivity.this, "http://192.168.1.27:5000/api");
            JSONObject requestBody = new JSONObject();
            //requestBody.put("content-type", "application/json");
            requestBody.put("user_name", userName);
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onFailure(Exception exception) {
 
-                    Toast.makeText(MainActivity.this, "Some Error", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
                     Log.v("Exception: ", "Exception " + exception);
 
                 }
