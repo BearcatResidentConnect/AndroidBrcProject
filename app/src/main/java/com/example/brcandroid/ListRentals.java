@@ -11,7 +11,7 @@ public class ListRentals extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_rentals);
+        setContentView(R.layout.nav_list_rentals);
     }
 
     public void onClickRegisterRental(View v){
