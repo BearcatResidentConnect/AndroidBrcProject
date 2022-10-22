@@ -21,7 +21,7 @@ public class UserRegister extends AppCompatActivity {
         userNameEdt = findViewById(R.id.idREdtUserName);
         emailEdt = findViewById(R.id.idREdtEmail);
         passwordEdt = findViewById(R.id.idREdtPassword);
-        cpasswordEdt = findViewById(R.id.idRConEdtPassword);
+        cpasswordEdt = findViewById(R.id.idRFName);
     }
 
     private boolean CheckAllFields() {

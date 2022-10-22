@@ -10,7 +10,7 @@
         android:id="@+id/idREdtUserName"
         android:layout_width="330dp"
         android:layout_height="53dp"
-        android:hint="Enter username"
+        android:hint="username"
         app:layout_constraintBottom_toTopOf="@+id/idREdtEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
@@ -21,7 +21,7 @@
         android:id="@+id/idREdtEmail"
         android:layout_width="330dp"
         android:layout_height="53dp"
-        android:hint="Enter mail id"
+        android:hint="email"
         app:layout_constraintBottom_toTopOf="@+id/idREdtPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -32,25 +32,37 @@
         android:id="@+id/idREdtPassword"
         android:layout_width="326dp"
         android:layout_height="50dp"
-        android:hint="enter password"
+        android:hint="password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/idRConEdtPassword"
+        app:layout_constraintBottom_toTopOf="@+id/idRFName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idREdtEmail" />
 
     <EditText
-        android:id="@+id/idRConEdtPassword"
+        android:id="@+id/idRFName"
         android:layout_width="326dp"
         android:layout_height="50dp"
-        android:hint="confirm password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/SignUpBtn"
+        android:hint="first name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/idRLName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idREdtPassword" />
+
+    <EditText
+        android:id="@+id/idRLName"
+        android:layout_width="326dp"
+        android:layout_height="50dp"
+        android:hint="last name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idRFName" />
 
     <Button
         android:id="@+id/SignUpBtn"
@@ -62,7 +74,7 @@
         app:layout_constraintEnd_toStartOf="@+id/loginBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idRConEdtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/idRLName" />
 
     <Button
         android:id="@+id/loginBtn"
@@ -74,18 +86,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/SignUpBtn"
-        app:layout_constraintTop_toBottomOf="@+id/idRConEdtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/idRLName" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="343dp"
         android:layout_height="107dp"
-        app:srcCompat="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/idREdtUserName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
