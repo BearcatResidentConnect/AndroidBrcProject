@@ -53,5 +53,19 @@ public class BrcAPIInterface {
         requestQueue.add(jsonObjectRequest);
     }
 
+    public void brcPutAPI(String url,JSONObject requestBody, BrcAPIResponse apiResponse) {
+
+        Log.v("Before Request : ", "Sending request to " + this.basuUrl + url);
+        JsonObjectRequest jsonObjectRequest =
+                new JsonObjectRequest(
+                        Request.Method.PUT,
+                        this.basuUrl + url,
+                        requestBody,
+                        apiResponse::onSuccess,
+                        apiResponse::onFailure
+                );
+        requestQueue.add(jsonObjectRequest);
+    }
+
 
 }
