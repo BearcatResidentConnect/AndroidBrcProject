@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
            String userName = userNameET.getText().toString();
            String password = userPasswordET.getText().toString();
 
-           BrcAPIInterface api = new BrcAPIInterface(MainActivity.this, "http://192.168.1.27:5000/api");
+           BrcAPIInterface api = new BrcAPIInterface(MainActivity.this, "http://10.31.120.188:5000/api");
            JSONObject requestBody = new JSONObject();
            //requestBody.put("content-type", "application/json");
            requestBody.put("user_name", userName);

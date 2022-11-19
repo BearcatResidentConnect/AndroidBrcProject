@@ -14,7 +14,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONObject;
 
 public class BrcAPIInterface {
-    private final String basuUrl;
+    private String basuUrl;
     private final RequestQueue requestQueue;
 
     public BrcAPIInterface(Context context, String basuUrl) {
