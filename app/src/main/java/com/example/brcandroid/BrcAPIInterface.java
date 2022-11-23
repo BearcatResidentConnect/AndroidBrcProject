@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
@@ -65,6 +66,20 @@ public class BrcAPIInterface {
                         apiResponse::onFailure
                 );
         requestQueue.add(jsonObjectRequest);
+    }
+
+    public void brcGetListAPI(String url,  BrcAPIListResponse apiResponse) {
+
+        Log.v("Before Request : ", "Sending request to " + this.basuUrl + url);
+        JsonArrayRequest jsonArrRequest =
+                new JsonArrayRequest(
+                        Request.Method.GET,
+                        this.basuUrl + url,
+                        null,
+                        apiResponse::onSuccess,
+                        apiResponse::onFailure
+                );
+        requestQueue.add(jsonArrRequest);
     }
 
 
