@@ -69,33 +69,33 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickLogin(View v){
 
-        try{
-            BrcAPIInterface ap = new BrcAPIInterface(MainActivity.this, "http://192.168.1.122:5000/api");
-            ap.brcGetListAPI ("/rental-postings", new BrcAPIListResponse() {
-
-
-                @Override
-                public void onSuccess(JSONArray response) {
-
-                    Toast.makeText(MainActivity.this,"Log in Successful ", Toast.LENGTH_SHORT).show();
-
-                    Log.v("MSG " , response.toString());
-
-                }
-
-                @Override
-                public void onFailure(Exception exception) {
-
-                    Toast.makeText(MainActivity.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
-                    Log.v("Exception: ", "Exception " + exception);
-
-
-                }
-
-            });
-        } catch(Exception e){
-
-        }
+//        try{
+//            BrcAPIInterface ap = new BrcAPIInterface(MainActivity.this);
+//            ap.brcGetListAPI ("/rental-postings", new BrcAPIListResponse() {
+//
+//
+//                @Override
+//                public void onSuccess(JSONArray response) {
+//
+//                    Toast.makeText(MainActivity.this,"Log in Successful ", Toast.LENGTH_SHORT).show();
+//
+//                    Log.v("MSG " , response.toString());
+//
+//                }
+//
+//                @Override
+//                public void onFailure(Exception exception) {
+//
+//                    Toast.makeText(MainActivity.this, "Invalid credentials", Toast.LENGTH_SHORT).show();
+//                    Log.v("Exception: ", "Exception " + exception);
+//
+//
+//                }
+//
+//            });
+//        } catch(Exception e){
+//
+//        }
 
         // store the returned value of the dedicated function which checks
         // whether the entered data is valid or if any fields are left blank.
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
            String userName = userNameET.getText().toString();
            String password = userPasswordET.getText().toString();
 
-           BrcAPIInterface api = new BrcAPIInterface(MainActivity.this, "http://192.168.1.122:5000/api");
+           BrcAPIInterface api = new BrcAPIInterface(MainActivity.this);
            JSONObject requestBody = new JSONObject();
            //requestBody.put("content-type", "application/json");
            requestBody.put("user_name", userName);

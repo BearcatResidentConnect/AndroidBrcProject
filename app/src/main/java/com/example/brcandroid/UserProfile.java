@@ -89,7 +89,7 @@ public class UserProfile extends AppCompatActivity {
             String fname = firstnametv.getText().toString();
             String lname = lastnametv.getText().toString();
 
-            BrcAPIInterface api = new BrcAPIInterface(UserProfile.this, "http://192.168.1.122:5000/api");
+            BrcAPIInterface api = new BrcAPIInterface(UserProfile.this);
             JSONObject requestBody = new JSONObject();
             //requestBody.put("content-type", "application/json");
             /*

@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
     <string name="app_name">BRCAndroid</string>
     <string name="title_activity_nav_main2">Nav_MainActivity2</string>
@@ -11,4 +13,7 @@
     <string name="menu_home">Profile</string>
     <string name="menu_gallery">View Applications</string>
     <string name="menu_slideshow">View Rentals</string>
+
+    <string name="brc_api_url">http://192.168.1.23:5000/api</string>
+
 </resources>

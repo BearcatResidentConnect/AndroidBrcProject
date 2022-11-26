@@ -1,5 +1,7 @@
 package com.example.brcandroid;
 
+import static android.provider.Settings.System.getString;
+
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
@@ -18,9 +20,10 @@ public class BrcAPIInterface {
     private String basuUrl;
     private final RequestQueue requestQueue;
 
-    public BrcAPIInterface(Context context, String basuUrl) {
+    public BrcAPIInterface(Context context) {
 
-        this.basuUrl = basuUrl;
+
+        this.basuUrl = "http://192.168.1.23:5000/api";
         this.requestQueue = Volley.newRequestQueue(context);
 
     }

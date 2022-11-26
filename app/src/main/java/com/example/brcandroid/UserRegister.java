@@ -3,65 +3,129 @@ package com.example.brcandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import org.json.JSONObject;
 
 public class UserRegister extends AppCompatActivity {
 
-    private EditText userNameEdt, emailEdt, passwordEdt, cpasswordEdt;
     boolean isAllFieldsChecked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_register);
-
-        // initializing our edit text  and buttons.
-        userNameEdt = findViewById(R.id.idREdtUserName);
-        emailEdt = findViewById(R.id.idREdtEmail);
-        passwordEdt = findViewById(R.id.idREdtPassword);
-        cpasswordEdt = findViewById(R.id.idRFName);
     }
 
     private boolean CheckAllFields() {
-        if (userNameEdt.length() == 0) {
-            userNameEdt.setError("Username is required");
+
+        EditText userNameET = findViewById(R.id.idREdtUserName);
+        EditText userPasswordET = findViewById(R.id.idREdtPassword);
+        EditText userEmailEt = findViewById(R.id.idREdtEmail);
+        EditText userFNET = findViewById(R.id.idRFName);
+        EditText userLNET = findViewById(R.id.idRLName);
+
+        if (userNameET.length() == 0) {
+            userNameET.setError("Username is required");
             return false;
         }
-        if (emailEdt.length() == 0) {
-            emailEdt.setError("email is required");
+        if (userEmailEt.length() == 0) {
+            userEmailEt.setError("email is required");
             return false;
         }
 
-        if (passwordEdt.length() == 0) {
-            passwordEdt.setError("Password is required");
+        if (userFNET.length() == 0) {
+            userFNET.setError("First Name is required");
             return false;
-        } else if (passwordEdt.length() < 6) {
-            passwordEdt.setError("Password must be minimum 6 characters");
+        }
+        if (userLNET.length() == 0) {
+            userLNET.setError("Last Name is required");
             return false;
         }
 
-        if (cpasswordEdt.length() == 0) {
-            cpasswordEdt.setError("Confirm Password is required");
+        if (userPasswordET.length() == 0) {
+            userPasswordET.setError("Password is required");
             return false;
-        } else if (cpasswordEdt.length() < 6) {
-            cpasswordEdt.setError("Confirm Password must be minimum 6 characters");
+        } else if (userPasswordET.length() < 6) {
+            userPasswordET.setError("Password must be minimum 6 characters");
             return false;
         }
+
         // after all validation return true.
         return true;
     }
 
     public void onClickRegister(View v){
 
-        //Redirect to Register page
-        isAllFieldsChecked = CheckAllFields();
+        try{
+            isAllFieldsChecked = CheckAllFields();
 
-        if (isAllFieldsChecked) {
-            Intent j = new Intent(this, UserRegister.class);
-            startActivity(j);
-            finish();
+            if (!isAllFieldsChecked){
+                return;
+            }
+            //
+            EditText userNameET = findViewById(R.id.idREdtUserName);
+            EditText userPasswordET = findViewById(R.id.idREdtPassword);
+            EditText userEmailEt = findViewById(R.id.idREdtEmail);
+            EditText userFNET = findViewById(R.id.idRFName);
+            EditText userLNET = findViewById(R.id.idRLName);
+
+            String userName = userNameET.getText().toString();
+            String password = userPasswordET.getText().toString();
+            String email = userEmailEt.getText().toString();
+            String first_name = userFNET.getText().toString();
+            String last_name = userLNET.getText().toString();
+
+            BrcAPIInterface api = new BrcAPIInterface(UserRegister.this);
+            JSONObject requestBody = new JSONObject();
+            // Request Body
+            /*
+              "user_name": "string",
+              "password": "string",
+              "first_name": "string",
+              "last_name": "string",
+              "email": "string",
+             */
+            requestBody.put("user_name", userName);
+            requestBody.put("password", password);
+            requestBody.put("first_name", first_name);
+            requestBody.put("last_name", last_name);
+            requestBody.put("email", email);
+            //
+            api.brcPostAPI("/user",requestBody, new BrcAPIResponse() {
+                @Override
+                public void onSuccess(JSONObject response) {
+
+                    Toast.makeText(UserRegister.this,"User Account Created ", Toast.LENGTH_SHORT).show();
+
+                    //
+                    Intent i = new Intent(UserRegister.this, MainActivity.class);
+                    startActivity(i);
+                    finish();
+
+                }
+
+                @Override
+                public void onFailure(Exception exception) {
+
+                    Toast.makeText(UserRegister.this, "User Account Creation Failed", Toast.LENGTH_SHORT).show();
+                    Log.v("Exception: ", "Exception " + exception);
+
+
+                }
+
+            });
+
+        }catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(UserRegister.this, "Unexpected error occurred", Toast.LENGTH_SHORT).show();
+        }finally{
+
         }
 
     }
