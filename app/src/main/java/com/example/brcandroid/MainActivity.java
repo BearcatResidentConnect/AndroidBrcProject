@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String userEmail = "userEmail";
     public static final String userFirstName = "userFirstName";
     public static final String userLastName = "userLastName";
+    public static final String userAdmin = "userAdmin";
 
     SharedPreferences sharedpreferences;
 
@@ -98,12 +99,15 @@ public class MainActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = sharedpreferences.edit();
 
                     try{
+                        //Log.v("DATA", response.toString());
                         editor.putString(USERNAME, response.getString("username"));
                         editor.putString(userEmail, response.getString("email"));
                         editor.putString(userFirstName, response.getString("firstname"));
                         editor.putString(userLastName, response.getString("lastname"));
+                        editor.putBoolean(userAdmin, response.getBoolean("admin"));
+
                     }catch (Exception e){
-                        Log.v("Error", "Error");
+                        Log.v("Error", "" + e);
                     }finally{
                         editor.commit();
                     }

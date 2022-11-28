@@ -5,7 +5,9 @@ import androidx.core.view.GestureDetectorCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -26,12 +28,24 @@ public class ListRentals extends AppCompatActivity {
     private UserRentaladpater adapter = null;
     private GestureDetectorCompat detector = null;
 
+    private Boolean userAdmin;
+
+    private SharedPreferences sharedpreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_rentals);
         myEModel = EventModel.getSingleton();
         setUpEventModels();
+
+        sharedpreferences = getSharedPreferences(
+                MainActivity.MyPREFERENCES,
+                Context.MODE_PRIVATE
+        );
+
+        userAdmin = sharedpreferences.getBoolean("userAdmin", false);
+        Log.v("userAdmin", String.valueOf(userAdmin));
     }
 
     private void setUpEventModels() {
@@ -46,7 +60,7 @@ public class ListRentals extends AppCompatActivity {
                 @Override
                 public void onSuccess(JSONArray response) {
 
-                    Toast.makeText(ListRentals.this,"Fetched Rentals List", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(ListRentals.this,"Fetched Rentals List", Toast.LENGTH_SHORT).show();
 
                     Log.v("MSG " , response.toString());
 
@@ -111,9 +125,20 @@ public class ListRentals extends AppCompatActivity {
 
         //open user register page
 
-        Intent userHomeIntent = new Intent(this, RentalRegister.class);
-        startActivity(userHomeIntent);
-        finish();
+        if (userAdmin){
+
+            Toast.makeText(ListRentals.this, "Authorized User", Toast.LENGTH_SHORT).show();
+            Intent userHomeIntent = new Intent(this, RentalRegister.class);
+            startActivity(userHomeIntent);
+            finish();
+
+        }
+
+        else{
+            Toast.makeText(ListRentals.this, "User not Authorized", Toast.LENGTH_SHORT).show();
+
+        }
+
 
     }
     private class RecyclerViewOnGestureListener extends GestureDetector.SimpleOnGestureListener {
