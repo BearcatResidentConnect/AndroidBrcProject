@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.text.BreakIterator;
+
 
 public class Recyleradpater extends RecyclerView.Adapter<Recyleradpater.MyViewHolder> {
     Context context;
@@ -25,14 +27,15 @@ public class Recyleradpater extends RecyclerView.Adapter<Recyleradpater.MyViewHo
     @Override
     public Recyleradpater.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.activity_user_rental,parent,false);
+        View view = inflater.inflate(R.layout.item_list,parent,false);
         return new Recyleradpater.MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull Recyleradpater.MyViewHolder holder, int position) {
         holder.tvProLoc.setText(myModel.eventsList.get(position).PropertyName);
-        holder.tvProAdd.setText(myModel.eventsList.get(position).PropertyLocation);
+        holder.tvProAdd.setText(myModel.eventsList.get(position).PropertyEmail);
+        holder.tvProDate.setText(myModel.eventsList.get(position).AppliedDate);
         Log.v("position", String.valueOf(position));
     }
 
@@ -42,11 +45,12 @@ public class Recyleradpater extends RecyclerView.Adapter<Recyleradpater.MyViewHo
     }
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView tvProLoc,tvProAdd;
+        TextView tvProLoc,tvProAdd, tvProDate;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tvProLoc = itemView.findViewById(R.id.tvProLoc);
             tvProAdd = itemView.findViewById(R.id.tvProAdd);
+            tvProDate = itemView.findViewById(R.id.tvProDate);
         }
     }
 

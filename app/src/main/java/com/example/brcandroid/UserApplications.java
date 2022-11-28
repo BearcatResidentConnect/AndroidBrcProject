@@ -38,13 +38,13 @@ public class UserApplications extends AppCompatActivity {
         // Call API
         try{
             BrcAPIInterface ap = new BrcAPIInterface(UserApplications.this);
-            ap.brcGetListAPI ("/rental-postings", new BrcAPIListResponse() {
+            ap.brcGetListAPI ("/user_applications", new BrcAPIListResponse() {
 
 
                 @Override
                 public void onSuccess(JSONArray response) {
 
-                    Toast.makeText(UserApplications.this,"Fetched Rentals List", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(UserApplications.this,"Fetched Rentals List", Toast.LENGTH_SHORT).show();
 
                     Log.v("MSG " , response.toString());
 
@@ -52,11 +52,12 @@ public class UserApplications extends AppCompatActivity {
                         try {
                             JSONObject tmp= response.getJSONObject(i);
                             Log.v("Data", tmp.toString());
-                            String propertyName= tmp.getString("name");
-                            String propertyLoc= tmp.getString("address1");
+                            String propertyName= tmp.getString("rental_name");
+                            String propertyEmail= tmp.getString("rental_email");
+                            String appliedDate= "1-1-1";//tmp.getString("applied_date");
                             Log.v("propertyName", propertyName);
-                            Log.v("propertyLoc", propertyLoc);
-                            myRModel.eventsList.add(new RecyclerModel.Recycler(propertyName,propertyLoc));
+                            Log.v("propertyLoc", propertyEmail);
+                            myRModel.eventsList.add(new RecyclerModel.Recycler(propertyName,propertyEmail, appliedDate));
 
                         } catch (JSONException e) {
 
@@ -68,7 +69,7 @@ public class UserApplications extends AppCompatActivity {
                     adapter = new Recyleradpater(UserApplications.this, myRModel);
                     Log.v("adapter", String.valueOf(adapter.getItemCount()));
 
-                    recyclerView = findViewById(R.id.recyclerview);
+                    recyclerView = findViewById(R.id.recycler_view);
                     recyclerView.setAdapter(adapter);
 
                     recyclerView.setLayoutManager(new LinearLayoutManager(UserApplications.this));

@@ -24,7 +24,7 @@ public class UserProfile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nav_activity_user_profile);
+        setContentView(R.layout.activity_user_profile);
         sharedpreferences = getSharedPreferences(
                 MainActivity.MyPREFERENCES,
                 Context.MODE_PRIVATE
@@ -136,6 +136,7 @@ public class UserProfile extends AppCompatActivity {
             Toast.makeText(UserProfile.this, "Unexpected error occurred", Toast.LENGTH_SHORT).show();
         }finally{
             //findViewById(R.id.loadingPanel).setVisibility(View.GONE);
+            finish();
         }
 
     }

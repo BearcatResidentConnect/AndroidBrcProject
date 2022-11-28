@@ -10,11 +10,12 @@ import java.util.ArrayList;
 public class RecyclerModel {
 
     public static class Recycler{
-        public String PropertyName, PropertyLocation;
+        public String PropertyName, PropertyEmail, AppliedDate;
 
-        public Recycler(String PropertyName, String PropertyLocation) {
+        public Recycler(String PropertyName, String PropertyEmail, String AppliedDate) {
             this.PropertyName = PropertyName;
-            this.PropertyLocation = PropertyLocation;
+            this.PropertyEmail = PropertyEmail;
+            this.AppliedDate = AppliedDate;
         }
 
     }
