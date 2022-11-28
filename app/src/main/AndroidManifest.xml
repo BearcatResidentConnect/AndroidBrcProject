@@ -22,6 +22,9 @@
             android:name=".ListRentals"
             android:exported="false" />
         <activity
+            android:name=".RentalDetailView"
+            android:exported="false" />
+        <activity
             android:name=".UserApplications"
             android:exported="false" />
         <activity

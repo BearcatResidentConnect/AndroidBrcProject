@@ -66,7 +66,7 @@
         android:id="@+id/idEdtPassword"
         android:layout_width="326dp"
         android:layout_height="50dp"
-        android:hint="enter password"
+        android:hint="Enter password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/idBtnRegister"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +102,9 @@
         android:id="@+id/loadingPanel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center" >
+        android:gravity="center"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <ProgressBar
             android:layout_width="wrap_content"
