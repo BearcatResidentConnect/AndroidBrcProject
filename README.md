@@ -8,6 +8,12 @@
 
 ### Android
 
-##Software 
+## Software we are using
 
 Android Studio Chipmunk | 2021.2.1
+
+## Tech Stack
+
+ a) Android
+ b) FastAPI
+ c)MYSQL
