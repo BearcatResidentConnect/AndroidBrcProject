@@ -141,4 +141,21 @@ public class UserProfile extends AppCompatActivity {
 
     }
 
+    public void onLogout(View view) {
+        // Launching News Feed Screen
+
+        sharedpreferences = getSharedPreferences(
+                MainActivity.MyPREFERENCES,
+                Context.MODE_PRIVATE
+        );
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.clear();
+        editor.apply();
+        Toast.makeText(UserProfile.this, "Logout Success", Toast.LENGTH_SHORT).show();
+        //Redirect to Login page
+        Intent i = new Intent(UserProfile.this, MainActivity.class);
+        startActivity(i);
+        finish();
+    }
+
 }
