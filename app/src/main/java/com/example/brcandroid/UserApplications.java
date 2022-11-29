@@ -54,7 +54,7 @@ public class UserApplications extends AppCompatActivity {
                             Log.v("Data", tmp.toString());
                             String propertyName= tmp.getString("rental_name");
                             String propertyEmail= tmp.getString("rental_email");
-                            String appliedDate= "1-1-1";//tmp.getString("applied_date");
+                            String appliedDate= "11-28-2022";//tmp.getString("applied_date");
                             Log.v("propertyName", propertyName);
                             Log.v("propertyLoc", propertyEmail);
                             myRModel.eventsList.add(new RecyclerModel.Recycler(propertyName,propertyEmail, appliedDate));
