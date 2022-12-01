@@ -23,7 +23,7 @@ public class BrcAPIInterface {
     public BrcAPIInterface(Context context) {
 
 
-        this.basuUrl = "http://192.168.1.23:5000/api";
+        this.basuUrl = "http://18.207.93.25:5000/api";
         this.requestQueue = Volley.newRequestQueue(context);
 
     }

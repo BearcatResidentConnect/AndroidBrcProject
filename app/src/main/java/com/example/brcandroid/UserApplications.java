@@ -5,7 +5,9 @@ import androidx.core.view.GestureDetectorCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -23,6 +25,7 @@ public class UserApplications extends AppCompatActivity {
     private RecyclerView recyclerView=null;
     private Recyleradpater adapter = null;
     private GestureDetectorCompat detector = null;
+    private SharedPreferences sharedpreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +37,17 @@ public class UserApplications extends AppCompatActivity {
 
     private void setUpEventModels() {
 
+        sharedpreferences = getSharedPreferences(
+                MainActivity.MyPREFERENCES,
+                Context.MODE_PRIVATE
+        );
+
+        String username = sharedpreferences.getString("USERNAME", "username");
 
         // Call API
         try{
             BrcAPIInterface ap = new BrcAPIInterface(UserApplications.this);
-            ap.brcGetListAPI ("/user_applications", new BrcAPIListResponse() {
+            ap.brcGetListAPI ("/user_applications/"+username, new BrcAPIListResponse() {
 
 
                 @Override
